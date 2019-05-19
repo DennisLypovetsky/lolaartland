@@ -4,7 +4,7 @@ module.exports = function () {
       server: {
         baseDir: './build'
       },
-      watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir'],
+      // watchEvents: ['change', 'add', 'unlink', 'addDir', 'unlinkDir'],
       reloadOnRestart: true,
       notify: false,
       ghostMode: false,
