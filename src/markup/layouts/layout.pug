@@ -1,0 +1,22 @@
+include mixins
+block meta
+
+//- !default lang='uk'
++b.HTML.page(class= pageModifier, lang='uk')
+
+  head
+    include ../../blocks/meta/meta
+    include ../../blocks/favicon/favicon
+    include ../../blocks/g-tag/g-tag
+
+    link(rel='stylesheet', href='css/style.min.css?v=1')
+
+  body
+    +e.wrapper
+      include ../../blocks/header/header
+      +e.MAIN.content
+        block content
+      include ../../blocks/footer/footer
+
+    script(src='js/scripts.min.js?v=1')
+    block script

@@ -1,0 +1,15 @@
+//------------------------------------------------------------------------------
+//  Image mixins
+//------------------------------------------------------------------------------
+
+// background retina image
+@mixin bgi ($image, $retina-image: null) {
+  background-image: url($image);
+
+  @if ($retina-image) {
+
+    @media (min-resolution: 192dpi) {
+      background-image: url($retina-image);
+    }
+  }
+}

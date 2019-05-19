@@ -1,0 +1,79 @@
+//------------------------------------------------------------------------------
+//  Text mixins
+//------------------------------------------------------------------------------
+
+// visually hidden
+@mixin hide-text {
+  position: absolute;
+
+  display: inline;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+// hide (icon) label
+// used for accessibility
+@mixin unfont {
+  font-size: 0;
+  letter-spacing: -.5em;
+
+  text-decoration: none;
+}
+
+// unsetting <button> browser styles
+@mixin unbutton {
+  padding-left: unset;
+  padding-right: unset;
+
+  font: inherit;
+
+  border: unset;
+  background-color: unset;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// unsetting <a> browser and color styles
+@mixin unlink {
+  line-height: inherit;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+}
+
+// Truncate text multiline
+// https://30-seconds.github.io/30-seconds-of-css/#truncate-text-multiline
+@mixin truncate (
+  $em: 2em,
+  $line-height: $line-height,
+  $background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255) 50%)
+) {
+  position: relative;
+
+  max-height: $em * $line-height;
+
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 6em;
+    height: 1em * $line-height;
+
+    background-image: $background-image;
+  }
+}

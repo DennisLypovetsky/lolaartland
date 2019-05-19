@@ -1,0 +1,35 @@
+.loading {
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+    margin-top: -16px;
+    margin-left: -16px;
+
+    border-radius: 32px;
+    animation: scaleout 1.2s infinite ease-in-out;
+
+    // Tweak as needed
+    mix-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.loading,
+.lazyload,
+.lazyloaded,
+.img-wrapper {
+  opacity: 1 !important;
+  transition: 2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}

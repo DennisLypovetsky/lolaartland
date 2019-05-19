@@ -1,0 +1,53 @@
+//------------------------------------------------------------------------------
+//  Mixins for paddings, margins and sizes
+//------------------------------------------------------------------------------
+
+// padding to the sides
+// helps to avoid overriding
+@mixin pd ($padding-left, $padding-right: $padding-left) {
+  padding-left: $padding-left;
+  padding-right: $padding-right;
+}
+
+// margins, max-width and paddings
+// in one statment
+@mixin maxw ($max-width: 1360) {
+  @include pd(calc((100vw - #{$max-width}#{px}) / 2));
+}
+
+// margin to the sides
+// helps to avoid overriding
+@mixin mg ($margin-left, $margin-right: $margin-left) {
+  margin-left: $margin-left;
+  margin-right: $margin-right;
+}
+
+// margin-right except the last elements
+@mixin mg-right ($margin-right) {
+
+  &:not(:last-child) {
+    margin-right: $margin-right;
+  }
+}
+
+// margin-bottom except last elements
+@mixin mg-bottom ($margin-bottom) {
+
+  &:not(:last-child) {
+    margin-bottom: $margin-bottom;
+  }
+}
+
+// easy to make square
+@mixin size ($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// easy to make circle
+@mixin round ($width, $height: $width, $border-radius: 50%) {
+  width: $width;
+  height: $height;
+
+  border-radius: $border-radius;
+}

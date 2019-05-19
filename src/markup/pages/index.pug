@@ -1,0 +1,13 @@
+extends ../layouts/layout
+
+block meta
+  - var title = "Lola Artland"
+  - var description = ""
+  - var ogImage = ""
+  - var pageModifier = "--index"
+  - var currentUrl = "/"
+
+block content
+  +b.SECTION.hero
+    +e.container.container
+      +e.H1.title Hello world!
