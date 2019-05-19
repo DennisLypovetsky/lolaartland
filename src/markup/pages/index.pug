@@ -8,19 +8,18 @@ block meta
   - var currentUrl = "/"
 
 block content
-  +b.HEADER.header
-    +e.container.container
-      +b.A.logo
-        +e.IMG.img(src='img/logo/img/logo.svg', width='170', alt='Lola Artland logo')
   +b.SECTION.hero
     +e.container.container
       +e.HEADER.heading
-        +e.H1.title Графічний дизайнер з Івано-Франківська
+        +e.H1.title Графічний дизайнер з Івано-Франківська
       +e.wrapper--text
         +e.P.text Привіт! Мене звати Лола.
-        +e.P.text Я спеціалізуюсь на логотипах та друкованих матеріалах. Займаюсь розробкою фірмового стилю чи дизайну для вебу.
-        +e.P.text Маю досвід в поліграфії та прийму безпосередню участь на всіх етапах: від розробки макету до друку.
+        +e.P.text Я спеціалізуюсь на логотипах та друкованих матеріалах. Займаюсь розробкою фірмового стилю чи дизайну для вебу.
+        +e.P.text Маю досвід в поліграфії та прийму безпосередню участь на всіх етапах: від розробки макету до друку.
         +e.P.text Напишить мені особисто:
 
       +e.wrapper--img
-        +e.IMG.img(src='img/hero/img/hero.png', alt='Lola')
+        +e.IMG.img(
+          srcset='img/hero/img/hero@0.5.png 320w, img/hero/img/hero.png 600w',
+          src='img/hero/img/hero.png',
+          alt='Lola')

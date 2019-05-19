@@ -12,6 +12,6 @@ module.exports = function () {
       // open: 'tunnel',
       // tunnel: true
     });
-    $.browserSync.watch('build', $.browserSync.reload)
+    $.browserSync.watch(['build', '!build/css/*'], $.browserSync.reload)
   });
 }

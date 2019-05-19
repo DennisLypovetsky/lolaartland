@@ -13,7 +13,7 @@
 // breakpoint for max-width
 @mixin bp-max ($max-width) {
 
-  @media only screen and (max-width: $max-width#{px}) {
+  @media only screen and (max-width: $max-width - 1#{px}) {
     @content;
   }
 }
@@ -21,7 +21,7 @@
 // breakpoint for min and max-width
 @mixin bp-minmax ($min-width, $max-width) {
 
-  @media only screen and (min-width: $min-width#{px}) and (max-width: $max-width#{px}) {
+  @media only screen and (min-width: $min-width#{px}) and (max-width: $max-width - 1#{px}) {
     @content;
   }
 }

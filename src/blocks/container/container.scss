@@ -1,7 +1,7 @@
 .container {
-  @include pd(10px); // !default
+  @include pd(20px);
 
   @include bp(1100) {
-    @include maxw(1100); // !default
+    @include maxw(1100);
   }
 }

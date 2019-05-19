@@ -3,18 +3,18 @@ $font-family--serif: "Georgia", "Times New Roman", "Times", serif;
 $font-family--monospace: SFMono-Regular, "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 $font-family--headings: $font-family;
 
-$font-size: 14px;
-$font-size--desktop: 18px;
+$font-size: 18px;
+$font-size--desktop: 21px;
 
-$font-size-h1: 32px;
-$font-size-h2: 32px;
+$font-size-h1: 24px;
+$font-size-h2: 24px;
 $font-size-h3: 24px;
 $font-size-h4: 16px;
 $font-size-h5: 16px;
 $font-size-h6: 16px;
 
-$font-size-h1--desktop: 54px;
-$font-size-h2--desktop: 54px;
+$font-size-h1--desktop: 36px;
+$font-size-h2--desktop: 36px;
 $font-size-h3--desktop: 36px;
 $font-size-h4--desktop: 16px;
 $font-size-h5--desktop: 16px;
@@ -22,7 +22,7 @@ $font-size-h6--desktop: 16px;
 
 $font-size--small: .75em;
 
-$line-height: 1.4;
+$line-height: 1.2;
 $line-height--headings: 1.1;
 
 body {
@@ -44,11 +44,12 @@ h4,
 h5,
 h6 {
   margin: unset;
+  @include mg-bottom(1em);
 
   font-family: $font-family--headings;
   font-weight: 700;
   line-height: $line-height--headings;
-  color: currentColor;
+  color: $accent;
 }
 
 h1 {
@@ -108,8 +109,9 @@ blockquote,
 pre,
 address,
 figure {
-  margin: unset;
   padding: unset;
+  margin: unset;
+  @include mg-bottom(1em);
 }
 
 ol,
