@@ -1,0 +1,48 @@
+.afterword {
+  @include pd-section(3em, 4em);
+
+  background-color: $grey;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 1em 2em;
+  }
+
+  &__wrapper {
+
+    &--text {
+
+      @include bp(600) {
+        max-width: 540px;
+      }
+    }
+
+    &--img {
+      max-width: 465px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1em;
+
+    @include bp(600) {
+      max-width: 500px;
+    }
+  }
+
+  &__img {
+    @include mg-bottom(1em);
+
+    border-radius: $border-radius;
+  }
+
+  &__text {
+
+    &--featured {
+      padding: 1em 3em;
+
+      border: 1px dotted $border-color;
+    }
+  }
+}
