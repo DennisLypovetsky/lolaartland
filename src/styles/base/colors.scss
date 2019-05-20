@@ -2,8 +2,10 @@ $accent: #012a66;
 $grey: #e5e5e5;
 $red: #ac2201;
 
-$text-color: #333; // !default
+$text-color: #333;
 $text-color--inactive: #333; // !default
+
+$border-color: rgba($text-color, .25);
 
 $link-color: $accent; // !default
 $link-color--hover: $accent; // !default

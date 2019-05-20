@@ -9,6 +9,7 @@
 @import 'base/colors.scss';
 @import 'base/typography.scss';
 @import 'base/animation.scss';
+@import 'base/variables.scss';
 
 @import '../blocks/page/page.scss';
 @import '../blocks/container/container.scss';
@@ -16,3 +17,5 @@
 @import '../blocks/footer/footer.scss';
 @import '../blocks/lazysizes/lazysizes.scss';
 @import '../blocks/hero/hero.scss';
+@import '../blocks/button/button.scss';
+@import '../blocks/how-we-work/how-we-work.scss';

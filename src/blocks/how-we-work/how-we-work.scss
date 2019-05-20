@@ -1,0 +1,34 @@
+.how-we-work {
+  // @include mg-section(100px, 150px, 600);
+  @include pd-section();
+
+  &__heading {
+    margin-bottom: 4em;
+
+    text-align: center;
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 232px);
+    justify-content: space-around;
+    grid-row-gap: 5em;
+    grid-column-gap: 1em;
+  }
+
+  &__step {
+    padding-top: 228px; // гнездо для совы
+
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    @include mg-bottom(.5em);
+  }
+}

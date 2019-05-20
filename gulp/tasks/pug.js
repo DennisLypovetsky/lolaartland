@@ -1,10 +1,10 @@
 module.exports = function () {
   $.gulp.task('pug:dev', function () {
     return $.gulp.src('src/markup/pages/*.pug')
-      // .pipe($.gp.plumber({
-      //   errorHandler: $.gp.notify.onError()
-      // }))
-      .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+      .pipe($.gp.plumber({
+        errorHandler: $.gp.notify.onError()
+      }))
+      // .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
       .pipe($.gp.pug({
         pretty: true
       }))

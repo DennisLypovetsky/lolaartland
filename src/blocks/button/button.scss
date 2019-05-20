@@ -1,0 +1,15 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: .3em .4em;
+
+  font-size: 24px;
+  color: currentColor;
+
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+
+  .icon {
+    margin-right: 0.4em;
+  }
+}

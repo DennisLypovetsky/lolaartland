@@ -17,9 +17,37 @@ block content
         +e.P.text Я спеціалізуюсь на логотипах та друкованих матеріалах. Займаюсь розробкою фірмового стилю чи дизайну для вебу.
         +e.P.text Маю досвід в поліграфії та прийму безпосередню участь на всіх етапах: від розробки макету до друку.
         +e.P.text Напишить мені особисто:
+        +b.A.button(href='')
+          +icon('messenger')
+          +e.SPAN.text Messenger
 
       +e.wrapper--img
         +e.IMG.img(
           srcset='img/hero/img/hero@0.5.png 320w, img/hero/img/hero.png 600w',
           src='img/hero/img/hero.png',
           alt='Lola')
+
+  +b.SECTION.how-we-work
+    +e.container.container
+      +e.HEADER.heading
+        +e.H2.title Від ідеї — до реалізації
+
+      +e.UL.steps
+        +e.LI.step(style='background-image: url(img/how-we-work/img/owl-1.png); padding-top: 200px; margin-top: 28px;')
+          +e.OL.list
+            +e.LI.item
+              +e.P.text Ви розповідаєте мені свою ідею
+            +e.LI.item
+              +e.P.text Ми фіксуємо сроки та ціну
+        +e.LI.step(style='background-image: url(img/how-we-work/img/owl-2.png);')
+          +e.OL.list
+            +e.LI.item
+              +e.P.text Я вивчаю вашу компанію та ринок
+            +e.LI.item
+              +e.P.text Пропрацьовую варіанти
+        +e.LI.step(style='background-image: url(img/how-we-work/img/owl-3.png);')
+          +e.OL.list
+            +e.LI.item
+              +e.P.text Презентація готової роботи
+            +e.LI.item
+              +e.P.text Не важче, аніж намалювати сову 😋

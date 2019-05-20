@@ -1,13 +1,15 @@
 .hero {
+  @include mg-section(100px, 150px, 600);
+
+  .button {
+
+    @include bp(600) {
+      border-color: $grey;
+    }
+  }
 
   &__container {
     display: grid;
-
-    @include bp-max(600) {
-      & > * {
-        grid-column: left / -1;
-      }
-    }
 
     @include bp(600) {
       grid-template-columns: [left] minmax(320px, auto) [right] minmax(320px, 611px);
