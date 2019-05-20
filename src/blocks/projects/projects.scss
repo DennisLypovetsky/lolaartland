@@ -1,0 +1,16 @@
+.projects {
+  @include pd-section(4em);
+
+  &__heading {
+    margin-bottom: 4em;
+
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 5em 6em;
+    justify-items: center;
+  }
+}
